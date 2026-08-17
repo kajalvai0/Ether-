@@ -1,0 +1,42 @@
+{
+  "name": "ether-private",
+  "version": "1.0.0",
+  "description": "ইথাগোরাস প্রাইভেট - একটি আধুনিক শিক্ষা প্রতিষ্ঠানের ওয়েবসাইট",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 8000 -c-1 -o",
+    "serve": "http-server . -p 8000 -c-1",
+    "build": "npm run minify:css && npm run minify:js",
+    "minify:css": "cleancss -o style.min.css style.css",
+    "minify:js": "terser script.js -o script.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lighthouse": "lighthouse http://localhost:8000 --view",
+    "audit": "npm audit"
+  },
+  "keywords": [
+    "education",
+    "coaching",
+    "website",
+    "responsive",
+    "bengali",
+    "ইথাগোরাস",
+    "শিক্ষা"
+  ],
+  "author": "kajalvai0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kajalvai0/Ether-.git"
+  },
+  "homepage": "https://github.com/kajalvai0/Ether-#readme",
+  "devDependencies": {
+    "cleancss": "^5.3.2",
+    "http-server": "^14.1.1",
+    "lighthouse": "^10.0.0",
+    "terser": "^5.20.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
